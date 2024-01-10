@@ -7,7 +7,12 @@
       <p class="login-box-msg">akram al bustami-213100002</p>
 
       <div class="input-group mb-3">
-        <input type="email" class="form-control" placeholder="Email" />
+        <input
+          type="email"
+          class="form-control"
+          placeholder="User Id"
+          Id="idText"
+        />
         <div class="input-group-append">
           <div class="input-group-text">
             <span class="fas fa-envelope"></span>
@@ -15,7 +20,12 @@
         </div>
       </div>
       <div class="input-group mb-3">
-        <input type="password" class="form-control" placeholder="Password" />
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Password"
+          id="passwordText"
+        />
         <div class="input-group-append">
           <div class="input-group-text">
             <span class="fas fa-lock"></span>
@@ -33,11 +43,7 @@
         <div class="col-4">
           <button
             class="btn btn-primary btn-block"
-            [routerLink]="['/admin']"
-            routerLinkActive="router-Link-Active"
-          >
-            Sign In
-          </button>
+           (click)="signIn()"> Sign In</button>
         </div>
         <!-- /.col -->
       </div>
@@ -59,6 +65,35 @@
       <p class="mb-0">
         <a href="/register" class="text-center">Register a new membership</a>
       </p>
+    </div>
+  </div>
+</div>
+<!--/.login-box-->
+<div class="modal" id="peringatanModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title">
+          <i class="fa fa-plus"></i>
+          Peringatan
+        </h5>
+        <button class="modal-footer">
+          <span aria-hidden="true">&times</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12 col-lg-12 col-xs-12">
+            <span id="pm_message"></span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning" data-dismiss="modal">
+          <i class="fa fa-check"></i>
+          Ok
+        </button>
+      </div>
     </div>
   </div>
 </div>
