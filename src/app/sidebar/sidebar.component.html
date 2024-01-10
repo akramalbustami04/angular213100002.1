@@ -117,13 +117,29 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a
+            [routerLink]="['/forex']"
+            routerLinkActive="router-Link-active"
+            class="nav-link {{ modulename == 'forex' ? 'active' : '' }}"
+          >
+            <i class="nev-icon far fa-money-bill-alt"></i>
+            <p>forex</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/cuaca']"
+            routerLinkActive="router-link-active"
+            class="nav-link {{ modulename == 'cuaca' ? 'active' : '' }}"
+          >
+            <i class="nav-icon fas fa-cloud-rain"></i>
+            <p>cuaca</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/mahasiswa" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
-            <p>
-              Layout Options
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">6</span>
-            </p>
+            <p>Mahasiswa (Non-router)</p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
