@@ -64,7 +64,7 @@ export class CuacaComponent implements OnInit, AfterViewInit {
   }
   convertTimestamp(timestamp: any): any {
     var date = new Date(timestamp * 1000);
-    const formattedtTime = date.toLocaleDateString('id-ID');
+    const formattedtTime = date.toLocaleDateString('id-ID') + '' + date.toLocaleTimeString('id-ID');
     return formattedtTime;
   }
 
@@ -106,6 +106,7 @@ export class CuacaComponent implements OnInit, AfterViewInit {
         });
 
         this.table1.draw(false);
+        this.setsun(data);
       });
   }
 
